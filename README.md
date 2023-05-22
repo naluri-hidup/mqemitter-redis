@@ -1,3 +1,6 @@
+# [FORK VERSION FOR NALURI]
+* Support Redis Cluster
+
 mqemitter-redis&nbsp;&nbsp;![ci](https://github.com/mcollina/mqemitter/workflows/ci/badge.svg)
 ===============
 
@@ -41,6 +44,26 @@ mq.on('hello world', function (message, cb) {
 // topic is mandatory
 mq.emit(msg, function () {
   // emitter will never return an error
+})
+```
+
+Cluster Example
+-------------------------
+```js
+var redis = require('mqemitter-redis')
+var mq = redis({
+  isCluster: true,
+  cluster: [
+    {
+      port: 12435
+      host: '12.34.56.78'
+    },
+    {
+      port: 12435
+      host: '12.34.56.79'
+    },
+    ...
+  ]
 })
 ```
 

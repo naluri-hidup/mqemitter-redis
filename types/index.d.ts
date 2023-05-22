@@ -1,4 +1,4 @@
-import type { RedisOptions } from 'ioredis';
+import type { RedisOptions, ClusterNode } from 'ioredis';
 import type { MQEmitter } from 'mqemitter';
 
 export interface MQEmitterOptions {
@@ -8,6 +8,8 @@ export interface MQEmitterOptions {
   wildcardOne?: string;
   wildcardSome?: string;
   connectionString?: string;
+  isCluster?: boolean;
+  cluster?: ClusterNode[]
 }
 
 export type Message = Record<string, any> & { topic: string };

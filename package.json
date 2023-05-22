@@ -29,7 +29,7 @@
   "pre-commit": "test",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcollina/mqemitter-redis.git"
+    "url": "git+https://github.com/naluri-hidup/mqemitter-redis.git"
   },
   "keywords": [
     "redis",
@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/mcollina/mqemitter-redis/issues"
   },
-  "homepage": "https://github.com/mcollina/mqemitter-redis"
+  "homepage": "https://github.com/mcollina/mqemitter-redis",
+  "publishConfig": {
+    "access": "public"
+  }
 }
