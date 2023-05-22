@@ -26,7 +26,6 @@
     "test:types": "tsd",
     "test": "standard && tape test.js | faucet && tsd"
   },
-  "pre-commit": "test",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/naluri-hidup/mqemitter-redis.git"
