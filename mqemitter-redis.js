@@ -37,6 +37,10 @@ function MQEmitterRedis (opts) {
 
   this.state = new EE()
 
+  this.state.on('error', (err) => {
+    console.error('Error from mqemitter-redis:', err)
+  })
+
   const that = this
 
   function onError (err) {
